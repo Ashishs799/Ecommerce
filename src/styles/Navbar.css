@@ -1,0 +1,32 @@
+.navbar {
+  background: #ffffff;
+}
+nav {
+  /* background: red; */
+  justify-content: space-between !important;
+  /* width: 100%; */
+  padding: 15px 0;
+  margin: 0 80px;
+}
+
+ul {
+  /* background: yellow; */
+  width: 500px;
+  justify-content: space-between !important;
+}
+
+li {
+  list-style: none;
+  /* color: #fff; */
+}
+
+.category {
+  justify-content: space-around !important;
+}
+
+.loginbtn {
+  /* background: green; */
+  column-gap: 20px;
+  justify-content: space-between !important;
+  /* color: #fff; */
+}

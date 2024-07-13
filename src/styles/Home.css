@@ -1,0 +1,73 @@
+section {
+  background-color: var(--bg-color);
+  height: 100vh;
+  position: relative;
+  padding: 0 80px;
+}
+img {
+  height: 600px;
+  position: absolute;
+  right: 80px;
+  bottom: 0;
+}
+
+.headings {
+  position: absolute;
+  top: 30%;
+  /* background: greenyellow; */
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+
+.button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #000000;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  /* padding: calc(.875rem - 1px) calc(1.5rem - 1px); */
+  padding: 5px 40px;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ffffff;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px; */
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
