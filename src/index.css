@@ -12,10 +12,24 @@ body {
 
 :root {
   --bg-color: #faedeb;
+  --secondary-color: #000000;
+  /* --secondary-color: */
+  --heading: 2.5rem;
 }
 
 .flex {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.p20-80 {
+  padding: 20px 80px;
 }

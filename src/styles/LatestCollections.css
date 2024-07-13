@@ -1,0 +1,42 @@
+.latest_collections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  /* padding: 20px 80px; */
+}
+
+.latest {
+  width: 450px;
+  height: 600px;
+  position: relative;
+}
+.latest img {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+h2 {
+  font-size: var(--heading);
+  display: inline-block;
+  position: relative;
+  /* background: red; */
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--secondary-color);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.info {
+  margin: 5px 0;
+}
+.info span {
+  font-size: 12px;
+}

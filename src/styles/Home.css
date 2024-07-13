@@ -14,7 +14,6 @@ img {
 .headings {
   position: absolute;
   top: 30%;
-  /* background: greenyellow; */
 }
 
 h1 {
@@ -34,8 +33,6 @@ h3 {
   color: #fff;
   cursor: pointer;
   display: inline-flex;
-  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -54,8 +51,7 @@ h3 {
   width: auto;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   background-color: #ffffff;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px; */
 }
@@ -64,10 +60,4 @@ h3 {
   transform: translateY(-1px);
   color: #000000;
   border: 1px solid #000000;
-}
-
-.button:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  transform: translateY(0);
 }
