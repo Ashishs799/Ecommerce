@@ -6,6 +6,28 @@
   row-gap: 12px;
   /* padding: 20px 80px; */
 }
+.new_arrivals {
+  background: cadetblue;
+  position: relative;
+  cursor: pointer;
+}
+.new_arrivals span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  color: #fff;
+  opacity: 0;
+  background: #00000091;
+  transition: opacity 0.3s ease-in;
+}
+
+.new_arrivals:hover span {
+  opacity: 1;
+}
 
 .latest {
   width: 450px;
