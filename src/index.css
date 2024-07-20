@@ -13,6 +13,7 @@ body {
 :root {
   --bg-color: #faedeb;
   --secondary-color: #000000;
+  --font-color: #fff
   /* --secondary-color: */
   --heading: 2.5rem;
 }
