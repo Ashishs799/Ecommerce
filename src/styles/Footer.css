@@ -1,0 +1,5 @@
+footer {
+  height: 80vh;
+  margin: 0 80px;
+  background: var(--bg-color);
+}
