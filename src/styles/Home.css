@@ -4,7 +4,7 @@ section {
   position: relative;
   padding: 0 80px;
 }
-img {
+.hero_img {
   height: 600px;
   position: absolute;
   right: 80px;

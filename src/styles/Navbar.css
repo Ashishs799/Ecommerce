@@ -15,6 +15,10 @@ ul {
   justify-content: space-between !important;
 }
 
+.logo_ {
+  width: 200px;
+}
+
 li {
   list-style: none;
   /* color: #fff; */

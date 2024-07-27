@@ -10,7 +10,7 @@ export const Home = () => {
         <h1>Clothing is for you</h1>
         <Button/>
       </div>
-      <img src={Ana} alt="" />
+      <img src={Ana} alt="" className="hero_img"/>
     </section>
   );
 };
