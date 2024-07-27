@@ -1,5 +1,51 @@
 footer {
   height: 80vh;
-  margin: 0 80px;
+  margin: 80px 80px 0 80px;
   background: var(--bg-color);
+  font-size: 14px;
+  font-weight: 300;
+  padding: 20px 80px;
+  position: relative;
+}
+
+.footer_wrapper {
+  align-items: start !important;
+  justify-content: space-between !important;
+}
+
+.footer_links .links {
+  /* background: red; */
+  align-items: start !important;
+  padding: 0;
+  row-gap: 10px !important;
+}
+.footer_links input {
+  width: 100%;
+  background: none;
+  border: 1px solid #000;
+  font-size: 12px;
+  padding: 12px 45px;
+}
+
+.subscribe_btn {
+  padding: 5px 70px !important;
+  width: 100%;
+  font-size: 12px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.copyright {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  justify-content: center !important;
+  padding: 50px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
