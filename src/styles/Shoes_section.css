@@ -6,15 +6,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .shoes_section {
   position: relative;
-  background: red;
+  /* background: red; */
   height: 100vh;
   margin: 0 80px;
 }
@@ -38,4 +34,26 @@
 .shoes span {
   font-size: 2.5rem;
   margin: 5px 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .shoes_section {
+    /* background: yellowgreen; */
+    margin: 0 20px;
+    height: 300px;
+  }
+  /* .shoes_collection {
+    height: 300px;
+    background-size: 300px;
+  } */
+  .shoes h1 {
+    font-size: 1.5rem;
+  }
+  .shoes span {
+    font-size: 0.8rem;
+  }
+  .shoes {
+    justify-content: center;
+    min-width: 235px;
+  }
 }

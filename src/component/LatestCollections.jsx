@@ -11,7 +11,7 @@ const LatestCollections = () => {
     <div className="latest_wrapper p20-80">
       <h2>New Arrivals</h2>
       <div className="latest_collections">
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest1} alt="" />
@@ -26,7 +26,7 @@ const LatestCollections = () => {
           </div>
         </div>
 
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest2} alt="" />
@@ -41,7 +41,7 @@ const LatestCollections = () => {
           </div>
         </div>
 
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest3} alt="" />
@@ -55,7 +55,7 @@ const LatestCollections = () => {
             <span>Rs. 2500</span>
           </div>
         </div>
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest4} alt="" />
@@ -70,7 +70,7 @@ const LatestCollections = () => {
             <span>Rs. 2500</span>
           </div>
         </div>
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest5} alt="" />
@@ -85,7 +85,7 @@ const LatestCollections = () => {
             <span>Rs. 2500</span>
           </div>
         </div>
-        <div>
+        <div className="new_wrapper">
           <div className="new_arrivals">
             <div className="latest">
               <img src={latest6} alt="" />

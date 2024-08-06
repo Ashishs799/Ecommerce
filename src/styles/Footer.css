@@ -24,7 +24,8 @@ footer {
   background: none;
   border: 1px solid #000;
   font-size: 12px;
-  padding: 12px 45px;
+  padding: 12px 30px;
+  outline: none;
 }
 
 .subscribe_btn {
@@ -48,4 +49,11 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+}
+
+.social_media {
+  /* background: yellow; */
+  font-size: 24px;
+  width: 90px;
+  justify-content: space-between !important;
 }

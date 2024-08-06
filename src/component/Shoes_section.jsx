@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles/Shoes_section.css";
-import { Button } from "./component/Button";
+import "../styles/Shoes_section.css"
+import { Button } from "./Button";
 
 const Shoes_section = () => {
   return (

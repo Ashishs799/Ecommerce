@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Footer.css";
-import { AiFillInstagram } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
+
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 
@@ -24,8 +25,8 @@ export const Footer = () => {
             <li>Koteshwar-32, Kathmandu</li>
             <li>Phone: +977 9805834618</li>
           </ul>
-          <div>
-            <AiFillInstagram />
+          <div className="social_media flex">
+            <RiInstagramFill />
             <FaFacebook />
             <FaTwitter />
           </div>
