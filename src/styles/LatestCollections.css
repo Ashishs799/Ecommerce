@@ -42,7 +42,7 @@
   top: 0;
 }
 
-.latest_wrapper h2 {
+h2 {
   font-size: var(--heading);
   display: inline-block;
   position: relative;
@@ -53,7 +53,7 @@
   /* background: red; */
 }
 
-.latest_wrapper h2::after {
+h2::after {
   content: "";
   position: absolute;
   height: 3px;
@@ -76,7 +76,7 @@
     padding: 20px 0 !important;
     margin: 0 20px;
   }
-  .latest_wrapper h2 {
+  h2 {
     font-size: 0.8rem;
   }
   .latest_collections {

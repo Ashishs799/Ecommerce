@@ -18,3 +18,19 @@
   position: absolute;
   top: 20%;
 }
+
+@media only screen and (max-width: 480px) {
+  .Men_shop {
+    height: 280px;
+    display: flex;
+    margin: 20px 20px;
+    display: flex;
+  }
+  .Men_shop img {
+    height: 280px;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+}

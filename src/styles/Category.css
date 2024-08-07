@@ -38,12 +38,14 @@
 .shop span {
   font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: 4px;
   /* line-height: 0; */
 }
 
 .shop h1 {
   text-transform: uppercase;
   line-height: 0;
+  letter-spacing: 4px;
 }
 .black_screen {
   height: 140vh;
@@ -68,4 +70,55 @@
   align-items: flex-start !important;
   /* justify-content: space-between !important; */
   padding: 0 120px;
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    /* background: yellow; */
+    margin: 0 20px;
+  }
+  .category {
+    flex-direction: column;
+    column-gap: normal;
+  }
+
+  .categories {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  .categories:nth-child(3) img {
+    height: 300px;
+    object-position: top;
+  }
+  .shop span {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .shop h1 {
+    line-height: 2;
+  }
+  .shop {
+    top: 0;
+  }
+
+  .black_screen {
+    height: 500px;
+    margin: 0;
+    flex-direction: column-reverse;
+    background: none;
+  }
+
+  .offer_img {
+    height: 300px;
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+  }
+  .offer_desc {
+    height: 300px;
+    width: 100%;
+  }
+  .offer_desc h3 {
+    line-height: 2;
+  }
 }

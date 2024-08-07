@@ -10,7 +10,6 @@
 
 .shoes_section {
   position: relative;
-  /* background: red; */
   height: 100vh;
   margin: 0 80px;
 }
@@ -41,10 +40,9 @@
     /* background: yellowgreen; */
     margin: 0 20px;
     height: 300px;
+    background-color: yellow;
   }
   /* .shoes_collection {
-    height: 300px;
-    background-size: 300px;
   } */
   .shoes h1 {
     font-size: 1.5rem;

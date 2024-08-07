@@ -34,3 +34,18 @@ body {
 .p20-80 {
   padding: 20px 80px;
 }
+
+li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem !important;
+    margin: 0;
+  }
+  h3 {
+    font-size: 0.8rem !important;
+    margin: 0;
+  }
+}

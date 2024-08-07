@@ -14,7 +14,6 @@ footer {
 }
 
 .footer_links .links {
-  /* background: red; */
   align-items: start !important;
   padding: 0;
   row-gap: 10px !important;
@@ -56,4 +55,30 @@ footer {
   font-size: 24px;
   width: 90px;
   justify-content: space-between !important;
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    margin: 40px 20px 0 20px;
+    font-size: 10px;
+    height: 500px;
+  }
+  .footer_wrapper {
+    flex-direction: column;
+  }
+  .footer_links .links {
+    row-gap: 5px !important;
+  }
+  .social_media {
+    font-size: 14px;
+    width: auto;
+    column-gap: 10px;
+    justify-content: space-between !important;
+  }
+  .subscription {
+    margin: 20px 0;
+  }
+  .copyright {
+    padding: 30px 0;
+  }
 }

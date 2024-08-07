@@ -31,7 +31,7 @@ export const Footer = () => {
             <FaTwitter />
           </div>
         </div>
-        <div className="footer_links">
+        <div className="footer_links subscription">
           <span>Receive all our news and updates</span>
           <input type="text" placeholder="Enter your email here*" />
           <button className="button subscribe_btn">Subscribe now</button>

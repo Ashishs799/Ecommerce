@@ -65,6 +65,11 @@ nav {
     z-index: 5;
     background: #fff;
     display: block;
+    transition: 0.3s ease-in;
+  }
+
+  .active_menu {
+    left: 0;
   }
   .logo_ {
     width: 60px;
