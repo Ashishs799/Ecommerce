@@ -17,6 +17,7 @@ nav {
 
 .navlinks {
   list-style: none;
+  text-transform: uppercase;
   /* color: #fff; */
 }
 
@@ -38,7 +39,31 @@ nav {
 .hamburger,
 .dropdown {
   display: none;
+  position: relative;
 }
+
+.menubar {
+  align-items: flex-start !important;
+  row-gap: 10px;
+  text-transform: uppercase;
+  /* background: yellow; */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.menu_login {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  padding: 0 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menu_login span {
+  font-size: 14px;
+}
+
 @media only screen and (max-width: 480px) {
   nav {
     width: calc(100%-40px);
@@ -65,7 +90,6 @@ nav {
     z-index: 5;
     background: #fff;
     display: block;
-    transition: 0.3s ease-in;
   }
 
   .active_menu {

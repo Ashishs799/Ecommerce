@@ -62,6 +62,7 @@ footer {
     margin: 40px 20px 0 20px;
     font-size: 10px;
     height: 500px;
+    padding: 20px 20px;
   }
   .footer_wrapper {
     flex-direction: column;
