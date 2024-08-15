@@ -1,0 +1,30 @@
+.men_sec {
+  /* height: 100vh; */
+  /* background: purple; */
+  position: relative;
+}
+
+.men_collection {
+  margin: 0 80px;
+  display: grid !important;
+  gap: 15px;
+  /* background: yellow; */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.box {
+  margin-top: 80px;
+  height: 400px;
+  background: url(../media/men/unisex.webp) no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.box h1,
+.box span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/Home.css";
-import Ana from "../media/ana.png";
+import Ana from "../media/maya.png";
 import { Button } from "./Button";
 export const Home = () => {
   return (
-    <section>
+    <section className="home">
       <div className="headings">
         <h3>Make your fashion better</h3>
         <h1>Clothing is for you..</h1>

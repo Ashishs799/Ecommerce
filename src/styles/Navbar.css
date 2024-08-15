@@ -1,6 +1,10 @@
 .navbar {
   background: #ffffff;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 nav {
   /* background: red; */
@@ -18,9 +22,15 @@ nav {
 .navlinks {
   list-style: none;
   text-transform: uppercase;
+
   /* color: #fff; */
 }
-
+.navbar a {
+  transition: 0.3s ease-in;
+}
+.navlinks a:hover {
+  color: #ffb4ae !important;
+}
 .category_nav {
   /* justify-content: space-around !important; */
   width: 400px;
@@ -44,11 +54,17 @@ nav {
 
 .menubar {
   align-items: flex-start !important;
-  row-gap: 10px;
+  row-gap: 20px;
   text-transform: uppercase;
   /* background: yellow; */
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.menubar li {
+  font-size: 14px;
+}
+.menubar li a:hover {
+  color: #ffb4ae !important;
 }
 
 .menu_login {
@@ -62,6 +78,22 @@ nav {
 
 .menu_login span {
   font-size: 14px;
+}
+
+.active {
+  color: #ffb4ae !important;
+  position: relative;
+  transition: 0.3s ease-in;
+}
+
+.active::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffb4ae;
 }
 
 @media only screen and (max-width: 480px) {
@@ -90,6 +122,11 @@ nav {
     z-index: 5;
     background: #fff;
     display: block;
+    transition: 0.5s ease;
+  }
+
+  .active::after {
+    width: 0;
   }
 
   .active_menu {

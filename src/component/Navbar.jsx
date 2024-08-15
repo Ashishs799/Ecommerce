@@ -9,7 +9,7 @@ import { RxCross1 } from "react-icons/rx";
 import { CiCircleRemove } from "react-icons/ci";
 import "../styles/Navbar.css";
 import Logo from "../media/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -31,11 +31,47 @@ export const Navbar = () => {
           }}
         />
         <ul className="menubar flex_column">
-          <li>Men</li>
-          <li>Women</li>
-          <li>Sneaker</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <NavLink
+              to={"/category/men"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Men
+            </NavLink>
+          </li>
+          <li>
+            {" "}
+            <NavLink
+              to={"/category/women"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Women
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/category/shoes"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Sneaker
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/pages/aboutus"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to={"/pages/contact"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
         <div className="menu_login">
           <CiUser style={{ fontSize: "1.2rem" }} />
@@ -53,10 +89,32 @@ export const Navbar = () => {
         </div>
 
         <ul className="category_nav flex">
-          <li className="navlinks">Men</li>
-          <li className="navlinks">Women</li>
-          <li className="navlinks">Sneaker</li>
+          <li className="navlinks">
+            <NavLink
+              to={"/category/men"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Men
+            </NavLink>
+          </li>
+          <li className="navlinks">
+            <NavLink
+              to={"/category/women"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Women
+            </NavLink>
+          </li>
+          <li className="navlinks">
+            <NavLink
+              to={"/category/shoes"}
+              style={{ textDecoration: "none", color: "#000" }}
+            >
+              Sneaker
+            </NavLink>
+          </li>
         </ul>
+
         <div className="loginbtn flex">
           <CiSearch />
           <BsHandbagFill />

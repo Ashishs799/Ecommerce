@@ -14,7 +14,7 @@ export const Container = () => {
       <Shoes_section />
       <Men_shop />
       <Category />
-      <Footer />
+      
     </>
   );
 };

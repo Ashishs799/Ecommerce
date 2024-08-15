@@ -1,0 +1,17 @@
+.sorting {
+  position: relative;
+  right: 0;
+  margin: 20px 80px;
+  justify-content: flex-end !important;
+}
+
+.sorting_wrapper {
+  /* background-color: #d1d1d1; */
+  padding: 10px 0;
+}
+
+.sorting_wrapper select {
+  border: 1px solid #000;
+  background: transparent;
+  padding: 8px 8px;
+}
