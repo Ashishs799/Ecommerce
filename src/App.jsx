@@ -7,6 +7,7 @@ import { Men } from "./Category/Men";
 import { Women } from "./Category/Women";
 import { Sneaker } from "./Category/Sneaker";
 import { Footer } from "./component/Footer";
+import { useState } from "react";
 
 function App() {
   return (

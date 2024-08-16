@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import shoes_data from "../Data/shoes_data";
 import "./Sneaker.css";
 import { Sorting } from "../component/Sorting";
 
 export const Sneaker = () => {
+  const [sortData, setSortData] = useState(shoes_data);
   return (
     <section className="shoes_sec">
       <div className="box shoes_wrap">
@@ -11,11 +12,11 @@ export const Sneaker = () => {
         <br />
         <h1>Sneakers collection</h1>
       </div>
-      <Sorting />
+      <Sorting data={sortData} setData={setSortData} originalData = {shoes_data}/>
       <div className=" men_collection">
-        {shoes_data.map((data) => {
+        {sortData.map((data) => {
           return (
-            <div className="new_wrapper">
+            <div className="new_wrapper" key={data.id}>
               <div className="new_arrivals">
                 <div className="latest">
                   <img src={data.image} alt="" />
