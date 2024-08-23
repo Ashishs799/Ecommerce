@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
-import shoes_data from "../Data/shoes_data";
 import "./Sneaker.css";
 import { Sorting } from "../component/Sorting";
+import collections from "../Data/collections";
 
 export const Sneaker = () => {
+  const shoes_data = collections.filter((shoes) => shoes.category === "shoes");
   const [sortData, setSortData] = useState(shoes_data);
   return (
-    <section className="shoes_sec">
+    <section className="men_sec shoes_sec">
       <div className="box shoes_wrap">
         <span>Discover Sneakers from Sneakerzz</span>
         <br />
         <h1>Sneakers collection</h1>
       </div>
-      <Sorting data={sortData} setData={setSortData} originalData = {shoes_data}/>
+      <Sorting
+        data={sortData}
+        setData={setSortData}
+        originalData={shoes_data}
+      />
       <div className=" men_collection">
         {sortData.map((data) => {
           return (

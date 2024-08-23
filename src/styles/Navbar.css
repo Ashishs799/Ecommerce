@@ -96,6 +96,7 @@ nav {
   background-color: #ffb4ae;
 }
 
+
 @media only screen and (max-width: 480px) {
   nav {
     width: calc(100%-40px);

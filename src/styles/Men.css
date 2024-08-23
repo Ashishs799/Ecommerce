@@ -22,9 +22,34 @@
 
 .box h1,
 .box span {
-  position: absolute;
+  position: absolute !important;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .men_collection {
+    margin: 0 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .box {
+    margin: 0;
+    height: 200px;
+    background-size: contain;
+  }
+  .box h1 {
+    font-size: 1.2rem !important;
+    margin: 20px 0;
+  }
+  .box span {
+    font-size: 8px;
+  }
+  .men_sec {
+    height: fit-content;
+  }
 }

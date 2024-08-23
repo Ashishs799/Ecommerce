@@ -11,7 +11,7 @@ import "../styles/Navbar.css";
 import Logo from "../media/logo.png";
 import { Link, NavLink } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = ({ hideSearchBar, hide }) => {
   const [active, setActive] = useState(false);
 
   const toggleMenu = () => {
@@ -116,7 +116,7 @@ export const Navbar = () => {
         </ul>
 
         <div className="loginbtn flex">
-          <CiSearch />
+          <CiSearch onClick={hideSearchBar} style={{ cursor: "pointer" }} />
           <BsHandbagFill />
           <span className="login">LOG IN</span>
         </div>

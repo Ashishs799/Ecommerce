@@ -1,6 +1,6 @@
 .sorting {
   position: relative;
-  right: 0;
+  /* right: 0; */
   margin: 20px 80px;
   justify-content: flex-end !important;
 }
@@ -14,4 +14,20 @@
   border: 1px solid #000;
   background: transparent;
   padding: 8px 8px;
+}
+
+@media only screen and (max-width: 480px) {
+  .sorting {
+    margin: 15px 20px;
+    /* margin-bottom: 20px; */
+    justify-content: flex-start !important;
+  }
+  .sorting_wrapper {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+  .sorting_wrapper select {
+    padding: 4px;
+    font-size: 14px;
+  }
 }

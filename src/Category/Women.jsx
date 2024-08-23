@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
-import women_data from "../Data/women_data";
 import "./Women.css";
 import { Sorting } from "../component/Sorting";
+import collections from "../Data/collections";
 
 export const Women = () => {
+  const women_data = collections.filter((women) => women.category === "women");
   const [sortData, setSortData] = useState(women_data);
   return (
-    <section className="women_sec">
+    <section className="men_sec women_sec">
       <div className="box women_box">
         <span>Discover Women's trend from Sneakerzz</span>
         <br />
         <h1>Women's collection</h1>
       </div>
-      <Sorting data={sortData} setData={setSortData} originalData = {women_data}/>
+      <Sorting
+        data={sortData}
+        setData={setSortData}
+        originalData={women_data}
+      />
       <div className=" men_collection">
         {sortData.map((data) => {
           return (

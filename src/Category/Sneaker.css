@@ -6,3 +6,19 @@
   background-position: bottom;
   background-size: cover;
 }
+
+@media only screen and (max-width: 480px) {
+  .shoes_wrap {
+    margin: 0;
+    height: 200px;
+    background-size: cover;
+  }
+  .shoes_wrap h1 {
+    font-size: 1.2rem !important;
+    width: max-content;
+    margin: 20px 0;
+  }
+  .shoes_wrap span {
+    font-size: 8px;
+  }
+}

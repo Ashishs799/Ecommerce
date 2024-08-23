@@ -6,15 +6,14 @@ import Men_shop from "./component/Men_shop";
 import { Category } from "./component/Category";
 import { Footer } from "./component/Footer";
 
-export const Container = () => {
+export const Container = ({ hideSearchBar, hide }) => {
   return (
     <>
-      <Home />
+      <Home hideSearchBar={hideSearchBar} hide={hide} />
       <LatestCollections />
       <Shoes_section />
       <Men_shop />
       <Category />
-      
     </>
   );
 };
