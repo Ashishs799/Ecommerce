@@ -38,6 +38,9 @@ body {
 li {
   list-style: none;
 }
+.m-0 {
+  margin: 0;
+}
 
 @media only screen and (max-width: 480px) {
   h1 {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/SearchBar.css";
 import { RxCross1 } from "react-icons/rx";
+import { toast } from "react-toastify";
 
 import { CiSearch } from "react-icons/ci";
 import { useNavigate } from "react-router";
@@ -11,7 +12,12 @@ export const SearchBar = ({ hideSearchBar, hide }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/search?query=${query}`);
+    if (!query) {
+      toast.error("Search something...");
+    } else {
+      navigate(`/search?query=${query}`);
+      hideSearchBar();
+    }
   };
   return (
     <div className={hide ? "search hide" : "search"}>
