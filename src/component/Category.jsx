@@ -4,6 +4,7 @@ import Sneaker from "../media/bluejordan1.jpg";
 import Men from "../media/fashionmen.jpg";
 import Women from "../media/fashionwoman.jpg";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
 export const Category = () => {
   return (
@@ -13,24 +14,30 @@ export const Category = () => {
         <div className="category flex">
           <div className="categories">
             <img src={Sneaker} alt="" />
-            <div className="shop flex_column">
-              <span>SHOP</span>
-              <h1>Sneakers</h1>
-            </div>
+            <Link to={"/category/shoes"}>
+              <div className="shop flex_column">
+                <span>SHOP</span>
+                <h1>Sneakers</h1>
+              </div>
+            </Link>
           </div>
           <div className="categories">
             <img src={Men} alt="" />
-            <div className="shop flex_column">
-              <span>SHOP</span>
-              <h1>Men</h1>
-            </div>
+            <Link to={"/category/men"}>
+              <div className="shop flex_column">
+                <span>SHOP</span>
+                <h1>Men</h1>
+              </div>
+            </Link>
           </div>
           <div className="categories">
             <img src={Women} alt="" />
-            <div className="shop flex_column">
-              <span>SHOP</span>
-              <h1>Women</h1>
-            </div>
+            <Link to={"/category/women"}>
+              <div className="shop flex_column">
+                <span>SHOP</span>
+                <h1>Women</h1>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -41,9 +48,11 @@ export const Category = () => {
           <span>THIS WEEKEND ONLY</span>
           <h3>15% Off Sitewide</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit assumenda corrupti dolor enim, delectus distinctio eligendi quo expedita quasi beatae placeat doloribus qui excepturi!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
+            assumenda corrupti dolor enim, delectus distinctio eligendi quo
+            expedita quasi beatae placeat doloribus qui excepturi!
           </p>
-          <Button/>
+          <Button />
         </div>
       </div>
     </div>

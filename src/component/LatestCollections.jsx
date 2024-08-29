@@ -1,104 +1,52 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/LatestCollections.css";
-import latest1 from "../media/huba1.webp";
-import latest2 from "../media/brocade1.webp";
-import latest3 from "../media/justculture.jpg";
-import latest4 from "../media/tayson_black.jpg";
-import latest5 from "../media/tshirt_white.jpg";
-import latest6 from "../media/tayson_white.jpg";
+import collections from "../Data/collections";
+import { Link } from "react-router-dom";
+
 const LatestCollections = () => {
+  const [newArrivals, setNewArrivals] = useState([]);
+  useEffect(() => {
+    function shuffleArray() {
+      const shuffledObjects = [...collections];
+      for (let i = shuffledObjects.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledObjects[i], shuffledObjects[j]] = [
+          shuffledObjects[j],
+          shuffledObjects[i],
+        ];
+      }
+      return shuffledObjects;
+    }
+    const shuffledArray = shuffleArray();
+    const randomSixObjects = shuffledArray.slice(0, 6);
+    setNewArrivals(randomSixObjects);
+  }, []);
+
   return (
     <div className="latest_wrapper p20-80">
       <h2>New Arrivals</h2>
       <div className="latest_collections">
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest1} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
+        {newArrivals &&
+          newArrivals.map((data) => {
+            return (
+              <div className="new_wrapper" key={data.id}>
+                <div className="new_arrivals">
+                  <div className="latest">
+                    <img src={data.image} alt="" />
+                  </div>
+                  <Link to={`/product/${data.id}`}>
+                    <span>Quick Look</span>
+                  </Link>
+                </div>
 
-          <div className="info">
-            <span>HUBA Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
-
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest2} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
-
-          <div className="info">
-            <span>Brocade Full Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
-
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest3} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
-
-          <div className="info">
-            <span>Just Culture Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest4} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
-
-          <div className="info">
-            {" "}
-            <span>Tayson Dark Green Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest5} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
-
-          <div className="info">
-            {" "}
-            <span>White Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
-        <div className="new_wrapper">
-          <div className="new_arrivals">
-            <div className="latest">
-              <img src={latest6} alt="" />
-            </div>
-            <span>Quick Look</span>
-          </div>
-
-          <div className="info">
-            <span>Tayson White Tshirt</span>
-            <br />
-            <span>Rs. 2500</span>
-          </div>
-        </div>
+                <div className="info">
+                  <span>HUBA Tshirt</span>
+                  <br />
+                  <span>Rs. 2500</span>
+                </div>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

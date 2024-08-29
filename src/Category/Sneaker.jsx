@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Sneaker.css";
 import { Sorting } from "../component/Sorting";
 import collections from "../Data/collections";
+import { Link } from "react-router-dom";
 
 export const Sneaker = () => {
   const shoes_data = collections.filter((shoes) => shoes.category === "shoes");
@@ -26,7 +27,9 @@ export const Sneaker = () => {
                 <div className="latest">
                   <img src={data.image} alt="" />
                 </div>
-                <span>Quick Look</span>
+                <Link to={`/product/${data.id}`}>
+                  <span>Quick Look</span>
+                </Link>
               </div>
 
               <div className="info">

@@ -1,0 +1,162 @@
+.product_detail {
+  margin-top: 78px;
+}
+
+.product_wrapper {
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  column-gap: 80px;
+  margin: 0 80px;
+}
+
+.prod_img {
+  width: 600px;
+  object-fit: cover !important;
+}
+
+.prod_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.prod_desc {
+  align-items: flex-start !important;
+  row-gap: 20px;
+}
+
+.intro {
+  align-items: flex-start !important;
+  row-gap: 5px;
+}
+
+.prod_name {
+  font-size: 2rem;
+}
+
+.logo_name,
+.size_lbl {
+  color: #00000093;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.price {
+  color: #000000b8;
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.size {
+  justify-content: flex-start !important;
+  column-gap: 8px;
+}
+
+.size_wrap {
+  border: 1px solid #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: 0.3s ease;
+  color: #000;
+  cursor: pointer;
+}
+.selected {
+  border: none !important;
+  background-color: #000;
+  color: #fff !important;
+}
+input[type="radio"] {
+  visibility: hidden;
+}
+
+.size_lbl {
+  text-transform: capitalize !important;
+}
+
+.quantity {
+  justify-content: space-between !important;
+  width: 120px;
+  font-size: 1.2rem;
+  padding: 0px 15px;
+  height: 40px;
+  border: 1px solid #000;
+}
+
+.quantity_no {
+  height: 100%;
+  width: 50%;
+  padding-left: 15px;
+  border: none;
+  outline: none;
+}
+
+.quantity > span {
+  cursor: pointer;
+}
+
+.cart_btn {
+  padding-left: 120px;
+  padding-right: 120px;
+  font-weight: normal;
+}
+
+.description {
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 480px) {
+  .product_wrapper {
+    margin: 0 20px;
+    flex-direction: column;
+  }
+  .prod_name {
+    font-size: 1.2rem;
+  }
+  .product_detail {
+    margin: 0;
+    height: fit-content !important;
+  }
+  .prod_img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .price {
+    margin: 2px 0;
+    font-size: 0.8rem;
+  }
+
+  .logo_name,
+  .size_lbl {
+    color: #00000093;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  .prod_desc {
+    row-gap: 10px;
+    margin-top: 5px;
+    max-height: max-content !important;
+  }
+  .size {
+    column-gap: 4px;
+  }
+
+  .size_wrap {
+    padding: 6px 15px;
+    font-size: 10px;
+  }
+  .intro {
+    row-gap: 2px;
+  }
+  .quantity {
+    width: 120px;
+    font-size: 1.2rem;
+    padding: 0px 15px;
+    height: 30px;
+    border: 1px solid #000;
+  }
+  .cart_btn {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: normal;
+  }
+}

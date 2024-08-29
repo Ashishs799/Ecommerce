@@ -11,7 +11,7 @@ import { useState } from "react";
 import ProductDetail from "./component/ProductDetail";
 import SearchList from "./component/SearchList";
 import collections from "./Data/collections";
-
+import ScrollToTop from "./component/ScrollToTop";
 function App() {
   const [hide, setHide] = useState(false);
   const hideSearchBar = () => {
@@ -20,12 +20,13 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar hideSearchBar={hideSearchBar} hide={hide}/>
+        <ScrollToTop />
+        <Navbar hideSearchBar={hideSearchBar} hide={hide} />
 
         <Routes>
           <Route
             path="/"
-            element={<Container hideSearchBar={hideSearchBar} hide={hide}/>}
+            element={<Container hideSearchBar={hideSearchBar} hide={hide} />}
           />
           <Route path="/category/men" element={<Men />} />
           <Route path="/category/women" element={<Women />} />

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Women.css";
 import { Sorting } from "../component/Sorting";
 import collections from "../Data/collections";
+import { Link } from "react-router-dom";
 
 export const Women = () => {
   const women_data = collections.filter((women) => women.category === "women");
@@ -26,7 +27,10 @@ export const Women = () => {
                 <div className="latest">
                   <img src={data.image} alt="" />
                 </div>
-                <span>Quick Look</span>
+
+                <Link to={`/product/${data.id}`}>
+                  <span>Quick Look</span>
+                </Link>
               </div>
 
               <div className="info">
