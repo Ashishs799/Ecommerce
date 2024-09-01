@@ -117,7 +117,9 @@ export const Navbar = ({ hideSearchBar, hide }) => {
 
         <div className="loginbtn flex">
           <CiSearch onClick={hideSearchBar} style={{ cursor: "pointer" }} />
-          <BsHandbagFill />
+          <Link to={"/cart"} >
+            <BsHandbagFill style={{color: "#000"}}/>
+          </Link>
           <span className="login">LOG IN</span>
         </div>
       </nav>

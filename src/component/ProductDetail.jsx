@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import collections from "../Data/collections";
 import "../styles/ProductDetail.css";
-import { toast } from "react-toastify";
+import { Quantity } from "./Quantity";
+import { Link } from "react-router-dom";
 
-const ProductDetail = () => {
+const ProductDetail = ({ addToCart, cartItems, quantity, setQuantity }) => {
   const [select, setSelected] = useState(null);
-  const [quantity, setQuanity] = useState(1);
+
   const { productId } = useParams();
   const prodId = Number(productId);
   const product = collections.find((prod) => prod.id === prodId);
@@ -15,16 +16,11 @@ const ProductDetail = () => {
     setSelected(size);
   };
 
-  const incrementQuatity = () => {
-    setQuanity(quantity + 1);
-  };
-  const decrementQuatity = () => {
-    if (quantity === 1) {
-      toast.error("Choose at at least one.");
-    } else {
-      setQuanity(quantity - 1);
-    }
-  };
+  useEffect(() => {
+    console.log("quantity selected ", quantity);
+    console.log(cartItems);
+  }, [cartItems]);
+
   return (
     <section className="product_detail">
       <div className="product_wrapper flex">
@@ -59,14 +55,12 @@ const ProductDetail = () => {
             >
               <span>L</span>
             </div>
-
             <div
               className={select === "XL" ? "size_wrap selected" : "size_wrap"}
               onClick={() => selectSize("XL")}
             >
               <span>XL</span>
             </div>
-
             <div
               className={select === "XXL" ? "size_wrap selected" : "size_wrap"}
               onClick={() => selectSize("XXL")}
@@ -75,12 +69,12 @@ const ProductDetail = () => {
             </div>
           </div>
           <span className="size_lbl">Quantity</span>
-          <div className="quantity flex">
-            <span onClick={decrementQuatity}>-</span>
-            <input type="text" value={quantity} className="quantity_no" />
-            <span onClick={incrementQuatity}>+</span>
-          </div>
-          <button type="button" className="button cart_btn">
+          <Quantity quantity={quantity} setQuantity={setQuantity} />
+          <button
+            type="button"
+            className="button cart_btn"
+            onClick={() => addToCart(product.id, select, quantity)}
+          >
             Add to cart
           </button>
 
