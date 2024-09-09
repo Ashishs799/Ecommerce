@@ -13,10 +13,14 @@ import SearchList from "./component/SearchList";
 import collections from "./Data/collections";
 import ScrollToTop from "./component/ScrollToTop";
 import Cart from "./component/Cart";
+import { Checkout } from "./component/Checkout";
 function App() {
   const [hide, setHide] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCartItems = localStorage.getItem("cartItems");
+    return savedCartItems ? JSON.parse(savedCartItems) : [];
+  });
   const hideSearchBar = () => {
     setHide(!hide);
   };
@@ -45,7 +49,11 @@ function App() {
     <>
       <BrowserRouter>
         <ScrollToTop />
-        <Navbar hideSearchBar={hideSearchBar} hide={hide} />
+        <Navbar
+          hideSearchBar={hideSearchBar}
+          hide={hide}
+          cartItems={cartItems}
+        />
 
         <Routes>
           <Route
@@ -75,6 +83,7 @@ function App() {
             element={<Cart cartItems={cartItems} />}
             quantity={quantity}
           />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

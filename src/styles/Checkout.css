@@ -1,0 +1,60 @@
+.checkout_wrapper {
+  margin: 0 80px;
+  justify-content: space-between !important;
+  /* background: red; */
+}
+.form {
+  width: 100%;
+}
+.prod_details {
+  background: yellow;
+  width: 40%;
+}
+
+.email_phone {
+  align-items: flex-start !important;
+  position: relative;
+}
+.email_phone > .delivery_info {
+  width: 50%;
+}
+.delivery_info {
+  margin: 10px 0;
+  position: relative;
+}
+.email_phone input,
+.delivery_info input {
+  border-radius: 0;
+  border: 1px solid #000;
+  outline: none;
+  padding: 12px 10px;
+  width: 100%;
+}
+
+.delivery_info input:focus + label {
+  visibility: visible;
+}
+
+.delivery_info label {
+  position: absolute;
+  top: 2px;
+  color: #000000b0;
+  z-index: 6;
+  font-size: 10px;
+  visibility: hidden;
+  left: 11px;
+  transition: 0.3s ease-in;
+}
+
+.grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* background: green; */
+  column-gap: 10px;
+}
+
+.delivery_info:nth-child(1) {
+  grid-column: 1 / span 2;
+  width: 100%;
+}

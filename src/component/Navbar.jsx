@@ -5,13 +5,14 @@ import { CiSearch } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CiUser } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 import { CiCircleRemove } from "react-icons/ci";
 import "../styles/Navbar.css";
 import Logo from "../media/logo.png";
 import { Link, NavLink } from "react-router-dom";
 
-export const Navbar = ({ hideSearchBar, hide }) => {
+export const Navbar = ({ hideSearchBar, hide, cartItems }) => {
   const [active, setActive] = useState(false);
 
   const toggleMenu = () => {
@@ -117,9 +118,13 @@ export const Navbar = ({ hideSearchBar, hide }) => {
 
         <div className="loginbtn flex">
           <CiSearch onClick={hideSearchBar} style={{ cursor: "pointer" }} />
-          <Link to={"/cart"} >
-            <BsHandbagFill style={{color: "#000"}}/>
-          </Link>
+          <div className="cartbag">
+            <Link to={"/cart"}>
+              <HiOutlineShoppingBag style={{ color: "#000" }} />
+            </Link>
+            {cartItems.length > 0 ? <span>{cartItems.length}</span> : ""}
+          </div>
+
           <span className="login">LOG IN</span>
         </div>
       </nav>

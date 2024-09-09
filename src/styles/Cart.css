@@ -32,9 +32,7 @@ tr {
   font-size: 1.8rem;
   font-weight: 500;
 }
-.prod_ {
-  /* width: 200px; */
-}
+
 .cart_product {
   max-width: fit-content;
   column-gap: 50px;
