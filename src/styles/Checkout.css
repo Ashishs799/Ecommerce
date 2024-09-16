@@ -101,10 +101,10 @@
 
 .credit_info {
   border: 1px solid #00000062;
-  width: 50%;
+  width: 100%;
   display: none;
   padding: 10px 15px;
-  transition: 2s ease !important;
+  transition: top 2s ease !important;
 }
 
 .credit_info .delivery_info {
@@ -164,7 +164,7 @@
 }
 .flex_btn {
   display: flex;
-  padding: 10px 0;
+  padding: 8px 0;
   justify-content: space-between;
 }
 
@@ -175,4 +175,68 @@
 
 .total {
   font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .chekout_section {
+    height: fit-content;
+  }
+  .checkout_wrapper {
+    margin: 0 20px;
+    flex-direction: column;
+
+    row-gap: 15px;
+  }
+  .email_phone input,
+  .delivery_info input {
+    padding: 8px 10px;
+  }
+
+  .apply_btn {
+    font-size: 0.7rem;
+    min-height: 2.1rem !important;
+    margin: 5px 0;
+  }
+
+  .cartbag > span {
+    font-size: 5px;
+    left: 5px;
+    top: 5px;
+  }
+
+  .radio {
+    border: 1px solid #00000062;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    position: relative;
+  }
+  label {
+    font-size: 12px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .prod_details {
+    width: 100%;
+    border-radius: 4px;
+    background: #ececec;
+    padding: 15px 25px;
+    font-size: 12px;
+  }
+
+  .products {
+    margin: 10px 0;
+
+    padding: 10px 0;
+  }
+  .total {
+    font-size: 1rem;
+  }
 }

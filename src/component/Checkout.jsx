@@ -25,7 +25,7 @@ export const Checkout = () => {
 
   const totalPrice = () => {
     const result = cartProducts.reduce((sum, prods) => {
-      return sum + prods.price;
+      return sum + prods.price * prods.quantity;
     }, 0);
     setSubtotal(result);
   };
@@ -173,7 +173,9 @@ export const Checkout = () => {
                     <span>{prod.size}</span>
                   </div>
                 </div>
-                <span className="checkout_price">{prod.price}</span>
+                <span className="checkout_price">
+                  Rs. {prod.price * prod.quantity}
+                </span>
               </div>
             ))}
           <div className="delivery_info coupon_code">
@@ -189,7 +191,7 @@ export const Checkout = () => {
           <div className="totalling">
             <div className="flex_btn">
               <span>Subtotal</span>
-              <span>{subtotal}</span>
+              <span>Rs. {subtotal}</span>
             </div>
             <div className="flex_btn">
               <span>Shipping</span>
@@ -198,7 +200,7 @@ export const Checkout = () => {
           </div>
           <div className="flex_btn total">
             <span>Total</span>
-            <span>{subtotal}</span>
+            <span>Rs. {subtotal}</span>
           </div>
         </div>
       </div>

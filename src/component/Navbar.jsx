@@ -74,10 +74,12 @@ export const Navbar = ({ hideSearchBar, hide, cartItems }) => {
             </NavLink>
           </li>
         </ul>
-        <div className="menu_login">
-          <CiUser style={{ fontSize: "1.2rem" }} />
-          <span>Log in</span>
-        </div>
+        <Link to={"#"} style={{ textDecoration: "none", color: "#000" }}>
+          <div className="menu_login">
+            <CiUser style={{ fontSize: "1.2rem" }} />
+            <span>Log in</span>
+          </div>
+        </Link>
       </div>
       <nav className="flex">
         <div className="hamburger" onClick={toggleMenu}>
@@ -118,14 +120,16 @@ export const Navbar = ({ hideSearchBar, hide, cartItems }) => {
 
         <div className="loginbtn flex">
           <CiSearch onClick={hideSearchBar} style={{ cursor: "pointer" }} />
-          <div className="cartbag">
-            <Link to={"/cart"}>
+          <Link to={"/cart"}>
+            <div className="cartbag">
               <HiOutlineShoppingBag style={{ color: "#000" }} />
-            </Link>
-            {cartItems.length > 0 ? <span>{cartItems.length}</span> : ""}
-          </div>
 
-          <span className="login">LOG IN</span>
+              {cartItems.length > 0 ? <span>{cartItems.length}</span> : ""}
+            </div>
+          </Link>
+          <Link to={"#"}>
+            <span className="login">LOG IN</span>
+          </Link>
         </div>
       </nav>
     </div>

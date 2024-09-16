@@ -50,6 +50,7 @@
     font-size: 8px;
   }
   .men_sec {
-    height: fit-content;
+    height: fit-content !important;
   }
+  
 }

@@ -25,18 +25,19 @@ h3 {
 
 /* media queries */
 @media only screen and (max-width: 480px) {
-  section {
+  .home {
     height: 75vh;
+    position: relative;
+    padding: 0 80px;
   }
   .headings {
-    /* background: blue; */
     position: relative;
     top: 100px;
 
     display: flex;
     justify-content: center;
     row-gap: 15px;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
   }
   .hero_img {
