@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
-import Ana from "../media/maya.png";
+import Ana from "../media/ana.png";
 import { Button } from "./Button";
 import { SearchBar } from "./SearchBar";
 export const Home = ({ hideSearchBar, hide }) => {

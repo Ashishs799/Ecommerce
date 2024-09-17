@@ -60,13 +60,15 @@ const Cart = ({ cartItems, quantity }) => {
                           <td className="cart_img">
                             <img src={items.image} alt="" />
                           </td>
-                          <span className="size_lbl cart_prod_name">
-                            {items.name}
-                          </span>
+                          <div className="flex_column align_start">
+                            <span className="size_lbl cart_prod_name">
+                              {items.name}
+                            </span>
 
-                          <span className="size_lbl cart_prod_name">
-                            {items.size}
-                          </span>
+                            <span className="size_lbl cart_prod_name">
+                              {items.size}
+                            </span>
+                          </div>
                         </div>
                         <td>
                           <Quantity
@@ -93,6 +95,48 @@ const Cart = ({ cartItems, quantity }) => {
               </table>
             </div>
 
+            <div className="cart_phn">
+              <table>
+                <tr>
+                  <th className="size_lbl">Product</th>
+                  <th className="size_lbl">Price</th>
+                </tr>
+                {cartProducts.map((items) => {
+                  return (
+                    <tr >
+                      <td>
+                        <div className="cart_phn_wrapper flex">
+                          <div className="flex container">
+                            <img
+                              src={items.image}
+                              alt=""
+                              className="cart_img"
+                            />
+                            <div className="flex_column align_start">
+                              <span>{items.name}</span>
+                              <span>{items.size}</span>
+                              <Quantity
+                                quantity={items.quantity}
+                                setQuantity={(newQuantity) =>
+                                  handleQuantityChange(
+                                    items.id,
+                                    items.size,
+                                    newQuantity
+                                  )
+                                }
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="tot_price">
+                        <span>Rs. {items.price}</span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </table>
+            </div>
             <div className="summary flex_column">
               <span>Summary</span>
               <table>

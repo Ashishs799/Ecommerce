@@ -127,7 +127,7 @@ export const Navbar = ({ hideSearchBar, hide, cartItems }) => {
               {cartItems.length > 0 ? <span>{cartItems.length}</span> : ""}
             </div>
           </Link>
-          <Link to={"#"}>
+          <Link to={"#"} style={{ textDecoration: "none", color: "#000" }}>
             <span className="login">LOG IN</span>
           </Link>
         </div>
