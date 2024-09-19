@@ -23,15 +23,15 @@ export const Women = () => {
         {sortData.map((data) => {
           return (
             <div className="new_wrapper" key={data.id}>
-              <div className="new_arrivals">
-                <div className="latest">
-                  <img src={data.image} alt="" />
-                </div>
+              <Link to={`/product/${data.id}`}>
+                <div className="new_arrivals">
+                  <div className="latest">
+                    <img src={data.image} alt="" />
+                  </div>
 
-                <Link to={`/product/${data.id}`}>
                   <span>Quick Look</span>
-                </Link>
-              </div>
+                </div>
+              </Link>
 
               <div className="info">
                 <span>{data.name}</span>
