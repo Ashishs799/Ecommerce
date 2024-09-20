@@ -41,9 +41,9 @@ const LatestCollections = () => {
                 </Link>
 
                 <div className="info">
-                  <span>HUBA Tshirt</span>
+                  <span>{data.name}</span>
                   <br />
-                  <span>Rs. 2500</span>
+                  <span>{data.price}</span>
                 </div>
               </div>
             );
