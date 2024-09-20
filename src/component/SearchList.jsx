@@ -82,7 +82,9 @@ const SearchList = ({ products }) => {
       <div className="row">
         <div className="sorting flex m-0">
           <div className="sorting_wrapper">
-            <span className="sortby"s>Sort by: </span>
+            <span className="sortby" s>
+              Sort by:{" "}
+            </span>
             <select
               name="sort"
               id="sort"
@@ -103,14 +105,15 @@ const SearchList = ({ products }) => {
         {filterProducts.map((data) => {
           return (
             <div className="new_wrapper" key={data.id}>
-              <div className="new_arrivals">
-                <div className="latest">
-                  <img src={data.image} alt="" />
+              <Link to={`/product/${data.id}`}>
+                <div className="new_arrivals">
+                  <div className="latest">
+                    <img src={data.image} alt="" />
+                  </div>
+
+                  <span>Quick Look</span>
                 </div>
-                {/* <Link to={`/product/${data.id}`}> */}
-                <span>Quick Look</span>
-                {/* </Link> */}
-              </div>
+              </Link>
 
               <div className="info">
                 <span>{data.name}</span>
