@@ -3,6 +3,7 @@ import { useLocation } from "react-router";
 import { CiSearch } from "react-icons/ci";
 import "../styles/SearchList.css";
 import { Sorting } from "./Sorting";
+import { Link } from "react-router-dom";
 
 const SearchList = ({ products }) => {
   const location = useLocation();

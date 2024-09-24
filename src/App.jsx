@@ -14,6 +14,7 @@ import collections from "./Data/collections";
 import ScrollToTop from "./component/ScrollToTop";
 import Cart from "./component/Cart";
 import { Checkout } from "./component/Checkout";
+import { SearchBar } from "./component/SearchBar";
 function App() {
   const [hide, setHide] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -46,9 +47,10 @@ function App() {
     }
   }, [cartItems]);
   return (
-    <>
+    <div className="app">
       <BrowserRouter>
         <ScrollToTop />
+        <SearchBar hideSearchBar={hideSearchBar} hide={hide} />
         <Navbar
           hideSearchBar={hideSearchBar}
           hide={hide}
@@ -87,7 +89,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

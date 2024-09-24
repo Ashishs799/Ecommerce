@@ -26,6 +26,12 @@ export const SearchBar = ({ hideSearchBar, hide }) => {
           type="text"
           placeholder="Search"
           onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              handleSearch(e);
+            }
+          }}
         />
         <CiSearch style={{ cursor: "pointer" }} onClick={handleSearch} />
       </div>
