@@ -83,9 +83,7 @@ const SearchList = ({ products }) => {
       <div className="row">
         <div className="sorting flex m-0">
           <div className="sorting_wrapper">
-            <span className="sortby" s>
-              Sort by:{" "}
-            </span>
+            <span className="sortby">Sort by: </span>
             <select
               name="sort"
               id="sort"
