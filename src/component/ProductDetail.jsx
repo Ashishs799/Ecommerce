@@ -19,6 +19,7 @@ const ProductDetail = ({ addToCart, cartItems, quantity, setQuantity }) => {
   useEffect(() => {
     console.log("quantity selected ", quantity);
     console.log(cartItems);
+    console.log(select);
   }, [cartItems]);
 
   return (
@@ -34,39 +35,104 @@ const ProductDetail = ({ addToCart, cartItems, quantity, setQuantity }) => {
             <span className="price">Rs. {product.price}</span>
           </div>
           <span className="size_lbl">Size</span>
-          <div className="flex size">
-            <div
-              className={select === "S" ? "size_wrap selected" : "size_wrap"}
-              onClick={() => selectSize("S")}
-            >
-              <span>S</span>
-            </div>
+          <div className="">
+            {product.category == "shoes" ? (
+              <div className="flex size">
+                <div
+                  className={
+                    select === "EU 38" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 38")}
+                >
+                  <span>EU 38</span>
+                </div>
+                <div
+                  className={
+                    select === "EU 39" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 39")}
+                >
+                  <span>EU 39</span>
+                </div>
+                <div
+                  className={
+                    select === "EU 40" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 40")}
+                >
+                  <span>EU 40</span>
+                </div>
+                <div
+                  className={
+                    select === "EU 41" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 41")}
+                >
+                  <span>EU 41</span>
+                </div>
+                <div
+                  className={
+                    select === "EU 42" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 42")}
+                >
+                  <span>EU 42</span>
+                </div>
+                <div
+                  className={
+                    select === "EU 43" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("EU 43")}
+                >
+                  <span>EU 43</span>
+                </div>
+              </div>
+            ) : (
+              <div className="flex size">
+                <div
+                  className={
+                    select === "S" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("S")}
+                >
+                  <span>S</span>
+                </div>
 
-            <div
-              className={select === "M" ? "size_wrap selected" : "size_wrap"}
-              onClick={() => selectSize("M")}
-            >
-              <span>M</span>
-            </div>
+                <div
+                  className={
+                    select === "M" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("M")}
+                >
+                  <span>M</span>
+                </div>
 
-            <div
-              className={select === "L" ? "size_wrap selected" : "size_wrap"}
-              onClick={() => selectSize("L")}
-            >
-              <span>L</span>
-            </div>
-            <div
-              className={select === "XL" ? "size_wrap selected" : "size_wrap"}
-              onClick={() => selectSize("XL")}
-            >
-              <span>XL</span>
-            </div>
-            <div
-              className={select === "XXL" ? "size_wrap selected" : "size_wrap"}
-              onClick={() => selectSize("XXL")}
-            >
-              <span>XLL</span>
-            </div>
+                <div
+                  className={
+                    select === "L" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("L")}
+                >
+                  <span>L</span>
+                </div>
+                <div
+                  className={
+                    select === "XL" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("XL")}
+                >
+                  <span>XL</span>
+                </div>
+                <div
+                  className={
+                    select === "XXL" ? "size_wrap selected" : "size_wrap"
+                  }
+                  onClick={() => selectSize("XXL")}
+                >
+                  <span>XLL</span>
+                </div>
+              </div>
+            )}
           </div>
           <span className="size_lbl">Quantity</span>
           <Quantity quantity={quantity} setQuantity={setQuantity} />
