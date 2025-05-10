@@ -9,7 +9,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 import { CiCircleRemove } from "react-icons/ci";
 import "../styles/Navbar.css";
-import Logo from "../media/logo.png";
+import Logo from "../media/pahiran_logo.png";
 import { Link, NavLink } from "react-router-dom";
 
 export const Navbar = ({ hideSearchBar, hide, cartItems }) => {
